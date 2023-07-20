@@ -20,3 +20,19 @@ t_data	*data_new(void)
 	data->min = INT_MAX;
 	return (data);
 }
+
+int	data_get(t_data *data, char *s)
+{
+	if (ft_strcmp(s, "ra") == 0)
+		return (data->ra);
+	else if (ft_strcmp(s, "rb") == 0)
+		return (data->rb);
+	else if (ft_strcmp(s, "rra") == 0)
+		return (data->rra);
+	else if (ft_strcmp(s, "rrb") == 0)
+		return (data->rrb);
+	else if (ft_strcmp(s, "rrr") == 0)
+		return (data->rrr);
+	else if (ft_strcmp(s, "rr") == 0)
+		return (data->rr);
+}

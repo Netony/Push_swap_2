@@ -1,23 +1,22 @@
+#include "push_swap_new.h"
+
 int	push_swap_main(t_vars *vars)
 {
-	
-}
-
-int	push_swap_sorted(t_vars *vars)
-{
 	int	sort;
+	int	ret;
 
-	sort = stack_issorted(vars->a);
-	if (sort == 1)
-	{
-		find_index
-	}
-	else if (sort == 2)
-	{
-		find_unsorted
-	}
-	else
-		return (1);
+	ret = push_swap_sort_a(vars);
+	if (ret == 0)
+		return (0);
+	ret = push_swap_move_all(vars, 3);
+	if (ret < 0)
+		return (-1);
+	ret = push_swap_greedy(vars);
+	if (ret < 0)
+		return (-1);
+	ret = push_swap_sort_a(vars);
+	if (ret == 1)
+		return (-1);
 	return (0);
 }
 
@@ -39,5 +38,3 @@ int	push_swap_move_all(t_vars *vars, int n)
 	}
 	return (ret);
 }
-
-

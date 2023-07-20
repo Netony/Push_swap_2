@@ -4,31 +4,18 @@
 #include "data.h"
 #include "../srcs/test.h"
 
-int	push_swap_test_test(t_vars *vars);
-void	ft_put(char *s);
+int		push_swap_test_test(t_vars *vars);
 int		vars_init(t_vars *vars, int argc, char **argv);
 
 int	main(int argc, char **argv)
 {
-	// t_vars	vars;
-	t_data	*data;
-	char	*test;
-	int		i;
-	int		size;
+	t_vars	vars;
 
-	data = data_new();
-	i = 0;
-	size = sizeof(t_data);
-	test = (char *)data;
-	while (i < size)
-		test[i++];
-	/*
 	if (vars_init(&vars, argc, argv) < 0)
 		return (-1);
-	ra(&vars);
+	push_swap_main
 	push_swap_test_test(&vars);
 	ft_putcmd(vars.cmd);
-	*/
 }
 
 void	ft_lstinsert_back(t_list *prev, t_list *new)

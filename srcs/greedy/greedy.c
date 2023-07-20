@@ -1,4 +1,4 @@
-#include "greedy.h"
+#include "data.h"
 
 t_data	*greedy_init(t_vars *vars);
 

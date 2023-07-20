@@ -1,5 +1,17 @@
 #include "push_swap_new.h"
 
+int		pa(t_vars *vars);
+int		pb(t_vars *vars);
+int		ra(t_vars *vars);
+int		rra(t_vars *vars);
+int		rb(t_vars *vars);
+int		rrb(t_vars *vars);
+int		sa(t_vars *vars);
+int		sb(t_vars *vars);
+int		ss(t_vars *vars);
+int		rr(t_vars *vars);
+int		rrr(t_vars *vars);
+
 int	push_swap(t_vars *vars, char *s)
 {
 	t_list	*new;
@@ -10,6 +22,38 @@ int	push_swap(t_vars *vars, char *s)
 	if (new == NULL)
 		return (-1);
 	ft_lstadd_back(&(vars->cmd), new);
+	return (0);
+}
+
+int	push_swap_n_times(t_vars *vars, char *s, int n)
+{
+	int	ret;
+	int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		ret = push_swap(vars, s);
+		if (ret < 0)
+			return (-1);
+		i++;
+	}
+	return (0);
+}
+
+int	push_swap_min_rotate(t_vars *vars, int index, char *ra, char *rra)
+{
+	int	size;
+	int	ret;
+	int	index;
+
+	size = ft_stsize(vars->a);
+	if (index < size - index)
+		ret = push_swap_n_times(ra, index);
+	else
+		ret = push_swap_n_times(rra, size - index);
+	if (ret < 0)
+		return (-1);
 	return (0);
 }
 
