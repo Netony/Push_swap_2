@@ -1,10 +1,8 @@
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_NEW_H
+# define PUSH_SWAP_NEW_H
 
 # include "lib.h"
 # include "stack.h"
-# include "cmd.h"
-# include <stdio.h>
 
 typedef struct s_vars
 {
@@ -14,10 +12,12 @@ typedef struct s_vars
 }	t_vars;
 
 t_stack	*parse_argv(int argc, char **argv);
+int		vars_init(t_vars *vars, int argc, char **argv);
 char	*cmd_to_char(t_list *lst);
 
-char	*push_swap(t_vars *vars);
-int		data_operation(t_vars *vars, t_data *data);
+t_data	*greedy(t_vars *vars);
+
+int		push_swap(t_vars *vars, char *s);
 
 int		pa(t_vars *vars);
 int		pb(t_vars *vars);
@@ -30,7 +30,6 @@ int		sb(t_vars *vars);
 int		ss(t_vars *vars);
 int		rr(t_vars *vars);
 int		rrr(t_vars *vars);
-
 
 #endif
 /*

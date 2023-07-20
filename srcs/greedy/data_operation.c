@@ -1,8 +1,8 @@
 #include "push_swap.h"
 #include "data.h"
 
-static int	data_ra(t_vars *vars, int ra);
-static int	data_rb(t_vars *vars, int rb);
+static int	data_ra(t_vars *vars, int ra_count);
+static int	data_rb(t_vars *vars, int rb_count);
 
 int	data_operation(t_vars *vars, t_data *data)
 {
@@ -11,37 +11,37 @@ int	data_operation(t_vars *vars, t_data *data)
 	return (0);
 }
 
-static int	data_ra(t_vars *vars, int ra)
+static int	data_ra(t_vars *vars, int ra_count)
 {
-	while (ra)
+	while (ra_count)
 	{
-		if (ra > 0)
+		if (ra_count > 0)
 		{
-			push_swap_ra(vars);
-			ra--;
+			ra(vars);
+			ra_count--;
 		}
 		else
 		{
-			push_swap_rra(vars);
-			ra++;
+			rra(vars);
+			ra_count++;
 		}
 	}
 	return (0);
 }
 
-static int	data_rb(t_vars *vars, int rb)
+static int	data_rb(t_vars *vars, int rb_count)
 {
-	while (rb)
+	while (rb_count)
 	{
-		if (rb > 0)
+		if (rb_count > 0)
 		{
-			push_swap_rb(vars);
-			rb--;
+			rb(vars);
+			rb_count--;
 		}
 		else
 		{
-			push_swap_rrb(vars);
-			rb++;
+			rrb(vars);
+			rb_count++;
 		}
 	}
 	return (0);

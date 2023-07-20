@@ -6,7 +6,7 @@
 #    By: dajeon <dajeon@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/16 09:00:32 by dajeon            #+#    #+#              #
-#    Updated: 2023/07/18 23:31:58 by dajeon           ###   ########.fr        #
+#    Updated: 2023/07/20 19:37:45 by dajeon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,14 +27,15 @@ SOURCES = stack/stack_new.c \
 		  command/command_list.c \
 		  command/cmd_lst_to_char.c \
 		  greedy/greedy.c \
-		  greedy/greedy_get_data.c \
-		  greedy/data.c \
+		  greedy/greedy_renew.c \
+		  greedy/greedy_renew_utils.c \
 		  greedy/data_operation.c \
 		  push_swap/push_swap_test.c \
-		  utils/ft_toklen.c
+		  command_new/command.c \
+		  utils/ft_toklen.c \
+		  utils/ft_strcmp.c
 
-
-DIRS = greedy push_swap stack command utils
+DIRS = greedy push_swap stack command utils command_new
 
 SOURCES_MANDA = main.c
 SOURCES_BONUS = test.c

@@ -42,7 +42,7 @@ t_list	*ps_move_all(t_vars *vars)
 	size = ft_stsize(vars->a);
 	while (i < size)
 	{
-		push_swap_pb(vars);
+		pb(vars);
 		i++;
 	}
 	return (cmd_lstnew("pb", i));
@@ -59,7 +59,7 @@ t_list	*ps_greedy(t_vars *vars)
 	{
 		data = greedy(vars);
 		data_operation(vars, data);
-		push_swap_pa(vars);
+		pa(vars);
 		cmd_new = data_to_cmd_list(data);
 		free(data);
 		if (cmd_new == NULL)

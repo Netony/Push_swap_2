@@ -4,7 +4,7 @@
 
 int	ft_max(int a, int b);
 
-int	push_swap_test(t_vars *vars)
+int	push_swap_test_test(t_vars *vars)
 {
 	t_stack	*a;
 	t_stack	*b;
@@ -40,6 +40,11 @@ int	push_swap_test(t_vars *vars)
 		i++;
 	}
 	return (0);
+}
+
+void	ft_put(char *s)
+{
+	ft_putendl_fd(s, 1);
 }
 
 int	ft_stprint(t_stack *stack)
